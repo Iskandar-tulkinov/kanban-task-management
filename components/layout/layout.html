@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" class="w-full h-full">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../../assets/css/variables.css" />
+  <link rel="stylesheet" href="../../components/button/button.css">
+  <link rel="stylesheet" href="../../assets/css/style.css">
+  <link rel="stylesheet" href="../../assets/css/output.css">
+  <link rel="stylesheet" href="layout.css">
+  <!-- <link
+         href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+         rel="stylesheet" /> -->
+
+
+</head>
+
+<body class="w-full h-full font-plus-jakarta-sans">
+  <div class="flex flex-col h-full w-full ">
+    <!-- HEADER -->
+    <header class="flex items-center w-full px-6 z-0 bg-content-color">
+      <!-- HEADER LOGO -->
+      <div
+        class="h-full flex text-black font-bold md:border-r-2 border-lines-color transition duration-200 ease-in-out focus:outline-none hover:opacity-80 ">
+        <a class="header-logo md:min-w-[274px] cursor-pointer md:flex flex items-center justify-center gap-4"
+          href="layout.html">
+          <svg class="" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="6" height="25" rx="2" fill="#635FC7" />
+            <rect opacity="0.75" x="9" width="6" height="25" rx="2" fill="#635FC7" />
+            <rect opacity="0.5" x="18" width="6" height="25" rx="2" fill="#635FC7" />
+          </svg>
+          <span class="hidden text-2xl md:block text-color">Kanban</span>
+
+        </a>
+      </div>
+      <div class="flex w-full justify-between items-center pl-4 py-5 md:py-5 md:pl-8">
+        <div
+          class="flex place-items-center gap-2 cursor-pointer transition duration-200 ease-in-out focus:outline-none hover:opacity-80">
+          <!-- Name of current Board -->
+          <span class="currentBoard text-color text-[18px] md:text-[20px] lg:text-[24px] font-bold">Platform
+            Launch</span>
+          <!-- SIDEBAR OPENER ICON -->
+          <span class="">
+            <svg
+              class="sidebarOpenerIcon rotate-90 inline-block w-full  transition cursor-pointer duration-200 ease-in-out md:hidden hover:scale-150"
+              width="9" height="7" viewBox="0 0 7 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L5 5L9 1" stroke="#635FC7" stroke-width="2" />
+            </svg>
+          </span>
+
+        </div>
+
+        <div class="flex items-center gap-4 md:gap-6">
+          <!-- ADD NEW TASK BUTTON -->
+          <button role="button"
+            class="btn w-full rounded-full text-center font-plus-jakarta-sans font-bold cursor-pointer transition duration-200 ease-in-out text-[15px]  focus:outline-none hover:bg-primary-light-color bg-primary-color text-white md:mr-6 p-[10px] md:py-4 px-6">
+            +
+            <span class="hidden md:inline-block">Add New Task</span>
+          </button>
+          <!-- TRIPLE DOTS -->
+
+          <i class="icon-menu cursor-pointer text-color"></i>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN -->
+    <main class="relative flex w-full h-full">
+      <div class="blocker"></div>
+      <!-- SIDEBAR -->
+      <aside
+        class="sidebar pr-6 min-w-[300px] hidden md:border-r-2 shadow-md shadow-indigo-500 border-lines-color
+             z-50 md:h-full md:flex md:flex-col justify-between md:items-center transition duration-200 ease-in-out bg-content-color">
+        <!-- LOGO -->
+        <!-- class=" ml-8 mr-4 " -->
+        <div class="flex flex-col w-full ">
+
+          <!-- NUMBER OF BOARDS -->
+          <div class="numberOfCreatedBoards uppercase py-4 pl-8 text-[#828FA3] font-bold tracking-wide text-[12px]">
+
+          </div>
+          <!-- BOARDS CREATED -->
+          <ul class="board-list   w-full mr-6 md:flex md:flex-col ">
+            <li
+              class="board__item active min-w-[240px]  flex items-start  cursor-pointer transition duration-200 ease-in-out focus:outline-none hover:opacity-80 text-[#828FA3] text-[15px]  ">
+              <a class="board__link active flex items-center py-4 px-8" href="#">
+                <i class="icon-layout block  mr-4"></i>
+                <span class="block pr-15">Platform Launch</span>
+              </a>
+
+            </li>
+            <li
+              class="board__item active flex items-center cursor-pointer text-[#828FA3] text-[15px]  duration-200 ease-in-out focus:outline-none hover:opacity-80 py-4 px-8 ">
+              <a class="board__link  flex items-center " href="#">
+                <i class="icon-layout block pr-4"></i>
+                <span class="block ">Marketing Plan</span>
+              </a>
+            </li>
+
+          </ul>
+          <!-- ADD NEW BOARD -->
+          <div
+            class="addNewBoard text-[#635FC7] text-[15px] cursor-pointer pr-6 py-4 transition duration-200 ease-in-out focus:outline-none hover:opacity-80">
+            <i class="icon-layout inline pl-8  fill-purple-500"></i>
+            + Create New Board
+          </div>
+        </div>
+
+        <div class="flex flex-col w-full">
+          <!-- THEME TOGGLE -->
+          <div class=" flex items-center m-3 md:m-0 justify-center w-full gap-4 py-[14px] bg-page-color rounded-2xl">
+            <i class="icon-sun text-[#828FA3]"></i>
+            <!-- TOGGLE -->
+            <div
+              class="theme-toggler pointer-events-auto cursor-pointer h-6 w-10 rounded-full p-1 ring-1 ring-inset transition duration-300 ease-in-out bg-primary-color  hover:opacity-80">
+              <div
+                class=" h-4 w-4 rounded-full bg-white shadow-sm ring-1 ring-slate-700/10 transition duration-200 ease-in-out ">
+              </div>
+            </div>
+            <i class="icon-moon text-[#828FA3]"></i>
+          </div>
+          <!-- SIDEBAR HIDER -->
+          <button
+            class="btn sidebar-hider rounded-full w-full mt-2 mb-8 text-center py-2 font-plus-jakarta-sans font-bold cursor-pointer transition duration-200 ease-in-out text-[13px] leading-6 focus:outline-none hover:bg-btn-light-color text-primary-color">
+            <i class="icon-eye-close text-primary-color font-bold"></i>
+            Hide Sidebar
+          </button>
+        </div>
+      </aside>
+      <!-- LAYOUT -->
+      <section class="bg-page-color w-full h-full flex flex-col flex-1 justify-center border-t-2 border-lines-color ">
+        <!-- <ul role="list" class=" flex gap-6">
+                  <li class="list-none">Column1</li>
+                  <li class="list-none">Column2</li>
+                  <li class="list-none">Column3</li>
+               </ul> -->
+        <!-- WHEN NO COLUMN IS AVAILABLE, show this page -->
+        <div class="flex flex-col gap-8">
+          <span class=" text-center text-4.5 text-[#828FA3] mx-2 md:px-5">This board is empty. Create a new column to
+            get started.</span>
+          <button
+            class="btn rounded-full text-center py-3.5 mx-auto px-4 font-plus-jakarta-sans font-bold text-[15px] leading-5 cursor-pointer transition duration-200 ease-in-out focus:outline-none bg-primary-color  text-white hover:bg-primary-light-color">+
+            Add New Column</button>
+        </div>
+        <!-- SIDEBAR REVEALER -->
+        <div class="sidebar-revealer hidden md:block absolute left-0 bottom-10  py-5 ">
+          <i
+            class="icon-eye btn rounded-r-full text-[16px] text-[#fff] hover:bg-primary-light-color cursor-pointer px-6 py-5  bg-[#635FC7] transition duration-200 ease-in-out focus:outline-none"></i>
+        </div>
+      </section>
+    </main>
+
+  </div>
+
+
+  <!-- JAVASCRIPT LINKS -->
+
+  <script src="../../js/main.js"></script>
+  <script src="../../components/header/header.js"></script>
+  <script src="../../components/sidebar/sidebar.js"></script>
+  <script src="layout.js"></script>
+</body>
+
+</html>

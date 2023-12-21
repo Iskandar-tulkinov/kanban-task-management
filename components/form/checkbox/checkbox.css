@@ -1,0 +1,14 @@
+.checkbox-icon {
+    font-size: 10px;
+    z-index: 10;
+}
+
+.checkbox-input:checked {
+    border-radius: 3px;
+}
+
+.checkbox-input:checked + label {
+    color: #00011280;
+    text-decoration:line-through;
+}
+
