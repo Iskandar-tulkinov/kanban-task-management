@@ -15,11 +15,11 @@ document.addEventListener('DOMContentLoaded', function () {
   numberOfCreatedBoards.textContent = `All boards (${createdBoards.length})`
 
   // =============//
-  
+
   // change theme manually via theme-toggler
   document.querySelector('.theme-toggler').addEventListener('click', function() {
-    const whiteSquare = document.querySelector('.rounded-shape');
-    whiteSquare.classList.toggle('translate-x-4');
+    const circle = document.querySelector('.circle');
+    circle.classList.toggle('moveX');
   });
 
   // WHEN hideSidebar icon ,in the sidebar, is clicked,
